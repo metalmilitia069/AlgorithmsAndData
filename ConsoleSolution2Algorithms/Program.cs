@@ -139,9 +139,42 @@ namespace ConsoleSolution2Algorithms
             //BUILT IN LIST
 
             //ListBuiltIn.RunList();
-            ListBuiltIn.ApiMembers();
+            //ListBuiltIn.ApiMembers();
 
             //END OF BUILT IN LIST
+
+            //NODES
+
+            //NodeReview first = new NodeReview() { Value = 5 };
+            //var second = new NodeReview() { Value = 1 };
+
+            //first.Next = second;
+
+            //var third = new NodeReview() { Value = 3 };
+
+            //second.Next = third;
+
+            //NodeReview.PrintLinkedList(first);
+
+            //END OF NODES
+
+            //LINKED LISTS
+            //SINGLY LINKED LISTS
+
+            //SinglyLinkedList<int> List = new SinglyLinkedList<int>();
+            //List.AddFirst(5);
+            //List.AddFirst(6);
+            //List.AddFirst(7);
+            //List.AddFirst(8);
+            //List.AddLast(5);
+            //List.AddLast(6);
+
+            SinglyLinkedList<string> ListS = new SinglyLinkedList<string>();
+            ListS.AddFirst("cu");
+            ListS.AddFirst("ca");
+            ListS.AddFirst("beludo");
+            ListS.PrintList();
+
 
         }
     }
