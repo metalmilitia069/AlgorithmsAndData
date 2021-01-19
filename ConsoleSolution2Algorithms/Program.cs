@@ -169,12 +169,36 @@ namespace ConsoleSolution2Algorithms
             //List.AddLast(5);
             //List.AddLast(6);
 
-            SinglyLinkedList<string> ListS = new SinglyLinkedList<string>();
-            ListS.AddFirst("cu");
-            ListS.AddFirst("ca");
-            ListS.AddFirst("beludo");
-            ListS.PrintList();
+            //SinglyLinkedList<string> ListS = new SinglyLinkedList<string>();
+            //ListS.AddFirst("cu");
+            //ListS.AddFirst("ca");
+            //ListS.AddFirst("beludo");
+            //ListS.PrintList();
 
+            //DOUBLY LINKED LISTS
+
+            //DoublyLinkedList<int> ListD = new DoublyLinkedList<int>();
+            //ListD.AddFirst(5);
+            //ListD.AddFirst(3);
+            //ListD.AddFirst(7);
+            //ListD.AddFirst(9);
+            //ListD.PrintList();
+
+            //END OF LINKED LISTS
+
+            //STACKS
+
+            StackArrayBased<int> ArrStack = new StackArrayBased<int>();
+            ArrStack.Push(1);
+            ArrStack.Push(10);
+            ArrStack.Push(100);
+            ArrStack.Push(1000);
+
+            foreach (var item in ArrStack)
+            {
+                Console.WriteLine(item);
+            }
+            
 
         }
     }

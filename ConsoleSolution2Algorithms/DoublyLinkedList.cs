@@ -48,7 +48,67 @@ namespace ConsoleSolution2Algorithms
             else
             {
                 Tail.Next = doublyNode;
+                doublyNode.Previous = Tail;
             }
+            Tail = doublyNode;
+            Count++;
+        }
+
+        public void RemoveFirst()
+        {
+            if (IsEmpty)
+            {
+                throw new InvalidOperationException();
+            }
+            Head = Head.Next;
+
+            Count--;
+
+            if (IsEmpty)
+            {
+                Tail = null;
+            }
+            else
+            {
+                Head.Previous = null;
+            }
+        }
+
+        public void RemoveLast()
+        {
+            if (IsEmpty)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (Count == 1)
+            {
+                Head = null;
+                Tail = null;
+            }
+            else
+            {
+                Tail.Previous.Next = null;
+                Tail = Tail.Previous;
+            }
+
+            Count--;
+        }
+
+        public void PrintList()
+        {
+            if (Count != 0)
+            {
+                Console.WriteLine(Head.Value);
+                DoublyNode<T> nnext = Head.Next;
+                while (nnext != null)
+                {
+                    Console.WriteLine(nnext.Value);
+                    nnext = nnext.Next;
+                }
+            }
+
+
         }
     }
 
