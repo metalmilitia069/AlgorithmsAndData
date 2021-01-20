@@ -26,11 +26,21 @@ namespace ConsoleSolution2Algorithms
 
         public T Peek()
         {
+            if (IsEmpty)
+            {
+                throw new InvalidOperationException();
+            }
+
             return _items[Count - 1];
         }
 
         public void Pop()
         {
+            if (IsEmpty)
+            {
+                throw new InvalidOperationException();
+            }
+
             if (IsEmpty)
             {
                 throw new InvalidOperationException();

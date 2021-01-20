@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ConsoleSolution2Algorithms
 {
-    class SinglyLinkedList<T>
+    class SinglyLinkedList<T> : IEnumerable<T>
     {
         public NodeReview2<T> Head { get; set; }
         public NodeReview2<T> Tail { get; set; }
@@ -55,6 +56,7 @@ namespace ConsoleSolution2Algorithms
 
         private bool IsEmpty => Count == 0;
 
+        
 
         public void RemoveFirst()
         {
@@ -99,6 +101,8 @@ namespace ConsoleSolution2Algorithms
             Count--;
         }
 
+        
+
         public void PrintList()
         {
             if (Count != 0)
@@ -113,7 +117,22 @@ namespace ConsoleSolution2Algorithms
             }
 
 
-        }       
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            NodeReview2<T> current = Head;
+            while (current != null)
+            {
+                yield return current.Value;
+                current = current.Next;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }    
 
     public class NodeReview2<T>
