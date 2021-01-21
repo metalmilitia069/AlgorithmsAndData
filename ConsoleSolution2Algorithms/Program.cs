@@ -285,34 +285,52 @@ namespace ConsoleSolution2Algorithms
 
             //LINEAR SEARCH
 
-            var customerList = new List<LinearSearchCustomer>()
-            {
-                new LinearSearchCustomer {Age = 3, Name = "Ann"},
-                new LinearSearchCustomer {Age = 16, Name = "Bill"},
-                new LinearSearchCustomer {Age = 20, Name = "Rose"},
-                new LinearSearchCustomer {Age = 14, Name = "Rob"},
-                new LinearSearchCustomer {Age = 28, Name = "Bill"},
-                new LinearSearchCustomer {Age = 14, Name = "John"},
-            };
+            //var customerList = new List<LinearSearchCustomer>()
+            //{
+            //    new LinearSearchCustomer {Age = 3, Name = "Ann"},
+            //    new LinearSearchCustomer {Age = 16, Name = "Bill"},
+            //    new LinearSearchCustomer {Age = 20, Name = "Rose"},
+            //    new LinearSearchCustomer {Age = 14, Name = "Rob"},
+            //    new LinearSearchCustomer {Age = 28, Name = "Bill"},
+            //    new LinearSearchCustomer {Age = 14, Name = "John"},
+            //};
 
-            var intList = new List<int>()
-            {
-                1, 4, 2, 7, 5, 9, 12, 3, 2, 1
-            };
+            //var intList = new List<int>()
+            //{
+            //    1, 4, 2, 7, 5, 9, 12, 3, 2, 1
+            //};
 
-            bool contains = intList.Contains(3);
+            //bool contains = intList.Contains(3);
 
-            bool contains2 = customerList.Contains(new LinearSearchCustomer { Age = 14, Name = "Rob" }, new CustomersComparer());
+            //bool contains2 = customerList.Contains(new LinearSearchCustomer { Age = 14, Name = "Rob" }, new CustomersComparer());
 
 
-            bool exists = customerList.Exists(LinearSearchCustomer => LinearSearchCustomer.Age == 28);
+            //bool exists = customerList.Exists(LinearSearchCustomer => LinearSearchCustomer.Age == 28);
 
-            int min = intList.Min();
-            int max = intList.Max();
+            //int min = intList.Min();
+            //int max = intList.Max();
 
-            int youngestCustomerAge = customerList.Min(LinearSearchCustomer => LinearSearchCustomer.Age);
+            //int youngestCustomerAge = customerList.Min(LinearSearchCustomer => LinearSearchCustomer.Age);
 
-            LinearSearchCustomer bill = customerList.Find(LinearSearchCustomer => LinearSearchCustomer.Name == "Bill");
+            //LinearSearchCustomer bill = customerList.Find(LinearSearchCustomer => LinearSearchCustomer.Name == "Bill");
+
+            //BINARY SEARCH
+
+            //int[] binaryArrTest = new int[10] { 99, 23, 43, 54, 32, 65, 534, 564, 241, 01 };
+
+            //Array.Sort(binaryArrTest);
+
+            //foreach (var item in binaryArrTest)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Achou o Numero? " + BinarySearch.BinarySearchTest(binaryArrTest, 23));
+            //Console.WriteLine("Achou o Numero? " + BinarySearch.BinarySearchTest(binaryArrTest, 33));
+
+            //SYMBOL TABLES
+
         }
     }
 }
