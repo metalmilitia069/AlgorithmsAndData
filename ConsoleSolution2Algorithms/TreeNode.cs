@@ -72,5 +72,44 @@ namespace ConsoleSolution2Algorithms
             return null;
         }
 
+        public IEnumerable<T> TraverseInOrder()
+        {
+            var list = new List<T>();
+            InnerTraverse(list);
+            return list;
+        }
+
+        private void InnerTraverse(List<T> list)
+        {
+            if (Left != null)
+            {
+                Left.InnerTraverse(list);
+            }
+            list.Add(Value);
+
+            if (Right != null)
+            {
+                Right.InnerTraverse(list);
+            }
+        }
+
+        public T Mininum()
+        {
+            if (Left != null)
+            {
+                return Left.Mininum();
+            }
+            return Value;
+        }
+
+        public T Maximum()
+        {
+            if (Right != null)
+            {
+                return Right.Maximum();
+            }
+            return Value;
+        }
+
     }
 }

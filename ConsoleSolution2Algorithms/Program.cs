@@ -329,7 +329,31 @@ namespace ConsoleSolution2Algorithms
             //Console.WriteLine("Achou o Numero? " + BinarySearch.BinarySearchTest(binaryArrTest, 23));
             //Console.WriteLine("Achou o Numero? " + BinarySearch.BinarySearchTest(binaryArrTest, 33));
 
-            //SYMBOL TABLES
+            //SYMBOL TABLES = DICTIONARIES
+
+            //BINARY SEARCH
+
+            var binaryTest = new BinarySearchTreeTest<int>();
+            binaryTest.InsertIt(37);
+            binaryTest.InsertIt(24);
+            binaryTest.InsertIt(17);
+            binaryTest.InsertIt(28);
+            binaryTest.InsertIt(31);
+            binaryTest.InsertIt(29);
+            binaryTest.InsertIt(15);
+            binaryTest.InsertIt(12);
+            binaryTest.InsertIt(20);
+
+            foreach (var item in binaryTest.TraverseInOrder())
+            {
+                Console.WriteLine($"{item} ");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine(binaryTest.Min());
+            Console.WriteLine(binaryTest.Max());
+
+            Console.WriteLine(binaryTest.Get(20).Value);
 
         }
     }
